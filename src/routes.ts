@@ -1,9 +1,8 @@
-import { Request, Response, Router } from "express";
-import UserController from './app/controllers/UserController';
+import { Router } from "express";
+import SupplierController from "./app/controllers/SupplierController";
+
 const routes: Router = Router();
 
-const userController = new UserController();
-
-routes.get('/fullname/:_id', userController.showFullname);
+routes.post('/suppliers', SupplierController.create);
 
 export default routes;
