@@ -1,6 +1,5 @@
-import { Document, Model } from 'mongoose';
+import { Document, Model, Types } from 'mongoose';
 import mongoose from '../../database';
-import { SupplierInterface } from './Supplier';
 
 export interface ProductInterface extends Document {
   createdAt: Date;
@@ -8,7 +7,7 @@ export interface ProductInterface extends Document {
   name: string;
   picture_url: string;
   price: number;
-  supplier: SupplierInterface;
+  supplier: Types.ObjectId;
   weight: number;
 };
 
